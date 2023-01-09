@@ -1,25 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import { Box, Flex } from "@chakra-ui/react";
+import { motion, useScroll } from "framer-motion";
+import Navbar from "./components/Navbar";
+import About from "./pages/About";
+import Intro from "./pages/Intro";
+import Contact from "./pages/Contact";
+import Projects from "./pages/Projects";
+import Footer from "./components/Footer";
 
 function App() {
+  const { scrollY }: any = useScroll();
+  const [number, setNumber] = useState(0);
+
+  function update() {
+    if (scrollY?.current < scrollY?.prev) {
+      setNumber(scrollY.current);
+    } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
+      setNumber(scrollY.current);
+    }
+  }
+
+  useEffect(() => {
+    return scrollY.onChange(() => update());
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Box
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        w={"100%"}
+        bg={`hsl(${82 + number / 10}, 39%, 30%)`}
+        color={"white"}
+        fontFamily="kanit"
+      >
+        <Flex ml={"20%"} mr="20%" pt="20vh" pb="50vh" flexDir={"column"}>
+          <Intro />
+          <About />
+          <Projects />
+          <Contact />
+        </Flex>
+        <Footer />
+      </Box>
+    </>
   );
 }
 
