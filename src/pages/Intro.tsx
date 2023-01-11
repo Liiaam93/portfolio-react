@@ -53,7 +53,7 @@ const Intro = () => {
         Hi, I'm
       </Heading>
       <Heading fontSize={"84"} fontWeight="500" textShadow={"5px 5px #000"}>
-        Liam Burbidge...
+        Liam...
       </Heading>
       <Divider />
       <Text fontSize={["4xl", "5xl", "6xl"]} color="yellow">
