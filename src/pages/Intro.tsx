@@ -1,4 +1,12 @@
-import { Box, Divider, Flex, Image, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Divider,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 
 const skills = [
   {
@@ -41,12 +49,12 @@ const skills = [
 const Intro = () => {
   return (
     <Box h={"80vh"}>
-      <Text fontSize={"3xl"} textShadow={"2px 2px #000"}>
+      <Heading fontSize={"3xl"} textShadow={"2px 2px #000"}>
         Hi, I'm
-      </Text>
-      <Text fontSize={"84"} fontWeight="500" textShadow={"5px 5px #000"}>
-        Liam...
-      </Text>
+      </Heading>
+      <Heading fontSize={"84"} fontWeight="500" textShadow={"5px 5px #000"}>
+        Liam Burbidge...
+      </Heading>
       <Divider />
       <Text fontSize={["4xl", "5xl", "6xl"]} color="yellow">
         I'm looking for my first role in

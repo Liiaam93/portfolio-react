@@ -12,6 +12,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <ChakraProvider resetCSS theme={customTheme}>
     <React.StrictMode>
+      <head>
+        <title>Liam Burbidge</title>
+        <meta name="description" content="Liam Burbidge online portfolio" />
+      </head>
       <App />
     </React.StrictMode>
   </ChakraProvider>
