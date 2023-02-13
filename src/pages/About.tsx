@@ -57,24 +57,19 @@ const About = () => {
           </Box>
           <Box fontSize="xl" textShadow={"1px 1px #000"}>
             <Text textAlign={"left"}>Hey</Text>
-            <Text>I'm Liam and I like building apps and websites.</Text>
+            <Text>I'm Liam and I'm a self-taught web developer with a passion for making things easier and more efficient. </Text>
             <Text pt="5" color={"yellow"}>
-              In 2019, I was working for an e-commerce store, uploading
-              products, adjusting prices and stock levels...
+              I stumbled upon web development in 2018 as a way to automate part of my job. Within six months of learning I had working web application which scraped information from various suppliers, showed stock levels and calculated prices based on product brand and other factors. 
             </Text>
             <Text color={"yellow"}>
-              I did some research into programming as I figured there had to be
-              a way of automating some of my work.
+              I quickly fell in love with JavaScript and some of its frameworks and began using them every day. I love using my skills to bring my interests to life, like making apps for my favorite board games, video games and collections.
             </Text>
             <Text pt="5">
-              Fast forward to six months later I had a fully working web app
-              built using React, that pulled new product data from multiple
-              suppliers, calulated prices, and shipping costs based on product
-              weight and even displayed stock levels!
+              Now web development is not only one of my hobbies, but I'm also looking to turn it into a career. 
             </Text>
             <Text color={"yellow"} pt="5">
-              Since then I've been hooked on building apps and websites, and
-              would love for the oppurtunity to turn my hobby into a career!
+              I'm always up for a challenge and love improving my skills. I'm a creative problem solver who's all about delivering great work. 
+              My goal is to be part of a team that's just as passionate as I am about creating stuff for the web. I'm confident that my skills, enthusiasm, and drive will make me a valuable addition to any team. Let's make something amazing together
             </Text>
           </Box>
         </Box>
