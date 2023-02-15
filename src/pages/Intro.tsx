@@ -78,15 +78,14 @@ const Intro = () => {
         Skills:
       </Text>
       <Flex
-        m="auto"
         wrap={"wrap"}
         borderRadius="10"
         bgColor={"rgba(255, 255, 255, 0.2)"}
-        w="fit-content"
         color={"black"}
+        justifyContent="center"
       >
         {skills.map((skill) => (
-          <VStack padding={3}>
+          <VStack padding={2}>
             <Image
               borderRadius={10}
               ml={2}
@@ -95,7 +94,9 @@ const Intro = () => {
               w={["30", "50"]}
               h={["30", "50"]}
             />
-            <Text fontSize={[10, 16]}>{skill.name}</Text>
+            <Text textAlign={"center"} fontSize={[10, 16]}>
+              {skill.name}
+            </Text>
           </VStack>
         ))}
       </Flex>

@@ -36,7 +36,13 @@ function App() {
         color={"white"}
         fontFamily="kanit"
       >
-        <Flex ml={"20%"} mr="20%" pt="20vh" pb="50vh" flexDir={"column"}>
+        <Flex
+          ml={["10%", "20%"]}
+          mr={["10%", "20%"]}
+          pt="20vh"
+          pb="50vh"
+          flexDir={"column"}
+        >
           <Intro />
           <About />
           <Projects />
