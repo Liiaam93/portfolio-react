@@ -31,7 +31,7 @@ const About = () => {
       initial="hidden"
       animate={control}
     >
-      <Box pt="10vh">
+      <Box pt="15vh">
         <Text fontSize={"3xl"} textAlign="center" textShadow={"2px 2px #000"}>
           About Me
         </Text>

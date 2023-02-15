@@ -48,7 +48,7 @@ const skills = [
 
 const Intro = () => {
   return (
-    <Box h={"80vh"}>
+    <Box h={["70vh", "80vh"]}>
       <Heading fontSize={"3xl"} textShadow={"2px 2px #000"}>
         Hi, I'm
       </Heading>
