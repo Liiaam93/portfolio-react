@@ -31,7 +31,7 @@ const About = () => {
       initial="hidden"
       animate={control}
     >
-      <Box pt="15vh">
+      <Box pt="10vh">
         <Text fontSize={"3xl"} textAlign="center" textShadow={"2px 2px #000"}>
           About Me
         </Text>
@@ -63,7 +63,7 @@ const About = () => {
             </Text>
             <Text pt="5" color={"yellow"}>
               I stumbled upon web development in 2018 as a way to automate part
-              of my job. Within six months of learning I had working web
+              of my job. Within six months of learning, I had a working web
               application which scraped information from various suppliers,
               showed stock levels and calculated prices based on product brand
               and other factors.
