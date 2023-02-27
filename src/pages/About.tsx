@@ -51,6 +51,7 @@ const About = () => {
               src="/avatar1.png"
               w={[200]}
               h={200}
+              border={"solid white"}
               borderRadius={"100"}
               backgroundColor={"rgba(255, 255, 255, 0.3)"}
             />
@@ -61,24 +62,18 @@ const About = () => {
               I'm Liam and I'm a self-taught web developer with a passion for
               making things easier and more efficient.
             </Text>
-            <Text pt="5" color={"yellow"}>
+            <Text pt="5" color={"#b82601"}>
               I stumbled upon web development in 2018 as a way to automate part
-              of my job. Within six months of learning, I had a working web
-              application which scraped information from various suppliers,
-              showed stock levels and calculated prices based on product brand
-              and other factors.
+              of my job. Within six months, I had a working web application
+              which scraped product information, stock levels and calculated
+              prices based on brand and other factors.
             </Text>
             <Text pt="5" color={"white"}>
-              I quickly fell in love with JavaScript and some of its frameworks
-              and began using them every day. I love using my skills to bring my
-              interests to life; making apps for my favorite board games, video
-              games and collections.
+              Since then I've decided to follow my dream of turning my hobby
+              into a career.
             </Text>
-            <Text pt="5" color={"yellow"}>
-              Now web development is not only one of my hobbies, but I'm also
-              looking to turn it into a career.
-            </Text>
-            <Text color={"yellow"}>
+
+            <Text color={"#b82601"} pt="5">
               I'm always up for a challenge and love improving my skills. Let's
               make something amazing together!
             </Text>

@@ -1,43 +1,75 @@
 import { extendTheme } from "@chakra-ui/react";
-import { theme as chakraTheme } from "@chakra-ui/react";
 
-const fonts = {
-  ...chakraTheme.fonts,
-  body: `Inter,-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "sans-serif", "kanit"`,
-  heading: `Inter,-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "sans-serif"`,
-};
-
-const breakpoints = {
-  sm: "40em",
-  md: "52em",
-  lg: "64em",
-  xl: "62em",
-};
-
-const overrides = {
-  ...chakraTheme,
-  fonts,
-  breakpoints,
+const customTheme = extendTheme({
+  colors: {
+    primary: "#1c2310",
+    secondary: "#B82601",
+    gray: {
+      50: "#F5F5F5",
+      100: "#EBEBEB",
+      200: "#D6D6D6",
+      300: "#C2C2C2",
+      400: "#ADADAD",
+      500: "#999999",
+      600: "#858585",
+      700: "#707070",
+      800: "#5C5C5C",
+      900: "#474747",
+    },
+  },
+  fonts: {
+    body: "'Open Sans', sans-serif",
+    heading: "'Montserrat', sans-serif",
+  },
   fontWeights: {
-    normal: 300,
-    medium: 600,
+    normal: 400,
+    medium: 500,
     bold: 700,
   },
-  fontSizes: {
-    xs: "12px",
-    sm: "14px",
-    md: "16px",
-    lg: "18px",
-    xl: "20px",
-    "2xl": "24px",
-    "3xl": "28px",
-    "4xl": "36px",
-    "5xl": "48px",
-    "6xl": "64px",
+  components: {
+    Button: {
+      baseStyle: {
+        fontWeight: "medium",
+        borderRadius: "md",
+        _focus: {
+          boxShadow: "none",
+        },
+      },
+      variants: {
+        solid: {
+          bg: "primary",
+          color: "white",
+          _hover: {
+            bg: "secondary",
+          },
+        },
+        outline: {
+          borderColor: "primary",
+          color: "primary",
+          _hover: {
+            bg: "primary",
+            color: "white",
+          },
+        },
+      },
+    },
+    Input: {
+      variants: {
+        outline: {
+          field: {
+            borderColor: "gray.300",
+            _hover: {
+              borderColor: "primary",
+            },
+            _focus: {
+              borderColor: "primary",
+              boxShadow: "none",
+            },
+          },
+        },
+      },
+    },
   },
-};
-const customTheme = extendTheme(overrides);
+});
 
 export default customTheme;

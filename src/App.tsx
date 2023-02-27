@@ -32,7 +32,7 @@ function App() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         w={"100%"}
-        bg={`hsl(${82 + number / 10}, 39%, 30%)`}
+        bg={`hsl(${82 + number / 10}, 39%, 10%)`}
         color={"white"}
         fontFamily="kanit"
       >

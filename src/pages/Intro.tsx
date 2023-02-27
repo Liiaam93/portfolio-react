@@ -7,6 +7,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import Typewriter from "typewriter-effect";
 
 const skills = [
   {
@@ -52,32 +53,36 @@ const Intro = () => {
       <Heading fontSize={"3xl"} textShadow={"2px 2px #000"}>
         Hi, I'm
       </Heading>
-      <Heading fontSize={"84"} fontWeight="500" textShadow={"5px 5px #000"}>
-        Liam
+      <Heading
+        fontSize={["82", "92"]}
+        fontWeight="500"
+        textShadow={"5px 5px #000"}
+      >
+        <Typewriter
+          onInit={(typewriter) => {
+            typewriter.typeString("Liam").pauseFor(1000).start();
+          }}
+        />
       </Heading>
       <Divider />
-      <Text fontSize={["4xl", "5xl", "6xl"]} color="yellow">
+      {/* <Text fontSize={["4xl", "5xl", "6xl"]} color="yellow">
         I'm looking for my first role in
-      </Text>
+      </Text> */}
       <Text
-        fontSize={["4xl", "5xl", "6xl"]}
-        color="aliceblue"
-        textShadow={"1px 1px #ff0000"}
+        fontSize={["2xl", "3xl", "4xl"]}
+        color="#B82601"
+        textShadow={"2px 2px #000"}
       >
-        Web Development
+        Web Developer
       </Text>
       <Divider />
 
-      <Text
-        mt="5"
-        mb="4"
-        fontSize={"2xl"}
-        textAlign="center"
-        textShadow={"1px 1px #000"}
-      >
-        Skills:
+      <Text mt="5" mb="4" fontSize={"2xl"} textShadow={"1px 1px #000"}>
+        I create things with:
       </Text>
       <Flex
+        m="auto"
+        w={"100%"}
         wrap={"wrap"}
         borderRadius="10"
         bgColor={"rgba(255, 255, 255, 0.2)"}
@@ -88,11 +93,10 @@ const Intro = () => {
           <VStack padding={2}>
             <Image
               borderRadius={10}
-              ml={2}
-              mr={2}
+              marginX={2}
               src={skill.image}
-              w={["30", "50"]}
-              h={["30", "50"]}
+              w={"50"}
+              h={"50"}
             />
             <Text textAlign={"center"} fontSize={[10, 16]}>
               {skill.name}

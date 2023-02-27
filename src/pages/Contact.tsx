@@ -1,3 +1,4 @@
+import { EmailIcon } from "@chakra-ui/icons";
 import { Text, Flex, Link, Button, Divider } from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
@@ -32,22 +33,25 @@ const Contact = () => {
       flexDirection="column"
       textAlign="center"
     >
-      <Text fontSize={"3xl"} textAlign="center" textShadow={"2px 2px #000"}>
+      <Text
+        fontSize={["2xl", "3xl"]}
+        textAlign="center"
+        textShadow={"2px 2px #000"}
+      >
         Contact
       </Text>
       <Divider ml="5" w="100" />
 
-      <Text ml="5" mt="20" fontSize={"2xl"} textShadow={"1px 1px #000"}>
+      <Text ml="5" mt="20" fontSize={["xl", "2xl"]} textShadow={"1px 1px #000"}>
         I am currently looking for work and would love to hear from you!
       </Text>
       <Button
+        border={"white solid 2px"}
         alignSelf={"center"}
-        width={"40%"}
         mt="10"
-        color={"black"}
-        bg={"yellow"}
         as={Link}
         href="mailto: burbidge.liam@gmail.com"
+        rightIcon={<EmailIcon />}
       >
         Get in touch
       </Button>

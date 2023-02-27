@@ -11,6 +11,7 @@ import {
   DrawerBody,
   Button,
   VStack,
+  Image,
 } from "@chakra-ui/react";
 import { useEffect, useState, useRef } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -67,22 +68,24 @@ const Navbar = () => {
         pos={"fixed"}
         w={"100%"}
         zIndex="sticky"
-        p="5"
-        backgroundColor={"rgba(255, 255, 255, 0.1)"}
+        p="2"
+        backgroundColor={"rgba(0, 0, 0, 0.5)"}
       >
         <Router>
-          <Link
-            as={HashLink}
-            to="/"
-            onClick={() => window.scrollTo(0, 0)}
-            color="white"
-          >
-            Home
-          </Link>
-          <Flex justifyContent={"right"} w="100%">
+          <Flex justifyContent={"left"} w="90%">
+            <Link
+              as={HashLink}
+              to="/"
+              onClick={() => window.scrollTo(0, 0)}
+              color="white"
+            >
+              <Image src="/logo.png" maxH="50px" />
+            </Link>
+          </Flex>
+          <Flex justifyContent={"right"} w="-moz-fit-content">
             <IconButton
               onClick={onOpen}
-              color={"grey"}
+              color={"white"}
               aria-label="Open Menu"
               size={"md"}
               icon={<HamburgerIcon />}
@@ -94,9 +97,9 @@ const Navbar = () => {
             display={["none", "none", "flex", "flex"]}
             justifyContent={"right"}
             w={"100%"}
-            spacing={"10"}
+            spacing={"5"}
           >
-            <Button as={HashLink} to="/#about" colorScheme={"green"}>
+            <Button as={HashLink} to="/#about">
               About
             </Button>
             <Button as={HashLink} to="/#projects" colorScheme={"green"}>
@@ -120,7 +123,7 @@ const Navbar = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerBody>
+          <DrawerBody backgroundColor={"rgb(184 38 1 / 0.5)"}>
             <VStack mt="10" spacing="10" p="10" textAlign={"center"}>
               <Button
                 w="100%"
