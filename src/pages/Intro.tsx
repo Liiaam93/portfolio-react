@@ -8,6 +8,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
 
 const skills = [
   {
@@ -90,6 +91,12 @@ const Intro = () => {
         justifyContent="center"
       >
         {skills.map((skill) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: index * 0.1 }}
+          >
           <VStack padding={2}>
             <Image
               borderRadius={10}
@@ -102,6 +109,7 @@ const Intro = () => {
               {skill.name}
             </Text>
           </VStack>
+        </motion.div>
         ))}
       </Flex>
     </Box>
