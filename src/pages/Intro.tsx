@@ -9,111 +9,125 @@ import {
 } from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
-
-const skills = [
-  {
-    name: "HTML",
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg",
-  },
-  {
-    name: "CSS",
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain.svg",
-  },
-  {
-    name: "JavaScript",
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-  },
-  {
-    name: "TypeScript",
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  },
-  {
-    name: "NodeJS",
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-  },
-  {
-    name: "React",
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  },
-  {
-    name: "Next",
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-  },
-];
+import { useEffect, useState } from "react";
+import { skills } from "../skills";
 
 const Intro = () => {
-  return (
-    <Box h={["70vh", "80vh"]}>
-      <Heading fontSize={"3xl"} textShadow={"2px 2px #000"}>
-        Hi, I'm
-      </Heading>
-      <Heading
-        fontSize={["82", "92"]}
-        fontWeight="500"
-        textShadow={"5px 5px #000"}
-      >
-        <Typewriter
-          onInit={(typewriter) => {
-            typewriter.typeString("Liam").pauseFor(1000).start();
-          }}
-        />
-      </Heading>
-      <Divider />
-      {/* <Text fontSize={["4xl", "5xl", "6xl"]} color="yellow">
-        I'm looking for my first role in
-      </Text> */}
-      <Text
-        fontSize={["2xl", "3xl", "4xl"]}
-        color="#B82601"
-        textShadow={"2px 2px #000"}
-      >
-        Web Developer
-      </Text>
-      <Divider />
+  const [showIntro, setShowIntro] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowIntro(true);
+    }, 2000);
 
-      <Text mt="5" mb="4" fontSize={"2xl"} textShadow={"1px 1px #000"}>
-        I create things with:
-      </Text>
-      <Flex
-        w={"fit-content"}
-        wrap={"wrap"}
-        borderRadius="10"
-        bgColor={"rgba(255, 255, 255, 0.2)"}
-        color={"black"}
-        justifyContent="center"
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <Box h={["50vh"]}>
+      <motion.div
+        initial={{ scale: 1.5 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.5 }}
       >
-        {skills.map((skill, index) => (
+        <Heading
+          textAlign="center"
+          fontSize={"3xl"}
+          textShadow={"2px 2px #000"}
+        >
+          Hi, I'm
+        </Heading>
+        <Heading
+          fontSize={["72", "92"]}
+          fontWeight="500"
+          textShadow={"5px 5px #000"}
+          textAlign="center"
+        >
+          <Typewriter
+            options={{
+              delay: 300,
+              loop: false,
+            }}
+            onInit={(typewriter) => {
+              typewriter.typeString("Liam").pauseFor(1000).stop().start();
+            }}
+          />
+        </Heading>
+      </motion.div>
+
+      {showIntro && (
+        <>
           <motion.div
-            key={index}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: index * 0.4 }}
+            initial={{ scale: 0.5 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1 }}
           >
-            <VStack padding={2}>
-              <Image
-                borderRadius={10}
-                marginX={2}
-                src={skill.image}
-                w={"50"}
-                h={"50"}
-                _hover={{
-                  filter: "invert(100%)",
-                }}
-              />
-              <Text textAlign={"center"} fontSize={[10, 16]}>
-                {skill.name}
+            <Divider />
+
+            <Text
+              fontSize={["2xl", "3xl", "4xl"]}
+              color="#B82601"
+              textShadow={"2px 2px #000"}
+              textAlign="center"
+            >
+              Web Developer
+            </Text>
+            <Divider />
+
+            <Text
+              mt="5"
+              mb="5"
+              fontSize={"2xl"}
+              textShadow={"1px 1px #000"}
+              textAlign="center"
+            >
+              I use...
+            </Text>
+            <Flex
+              w={"fit-content"}
+              wrap={"wrap"}
+              borderRadius="10"
+              // bgColor={"rgba(255, 255, 255, 0.1)"}
+              color={"white"}
+              justifyContent="center"
+              m={"auto"}
+            >
+              {skills.map((skill, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: index * 0.4 }}
+                >
+                  <VStack padding={2}>
+                    <Image
+                      borderRadius={10}
+                      marginX={2}
+                      src={skill.image}
+                      w={"50"}
+                      h={"50"}
+                      _hover={{
+                        filter: "invert(100%)",
+                      }}
+                    />
+                    <Text textAlign={"center"} fontSize={"sm"}>
+                      {skill.name}
+                    </Text>
+                  </VStack>
+                </motion.div>
+              ))}
+            </Flex>
+            <motion.div
+              initial={{ scale: 0.5 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 5 }}
+            >
+              <Text textAlign="center" fontSize={"2xl"} mt="5">
+                To create things.
               </Text>
-            </VStack>
+            </motion.div>
           </motion.div>
-        ))}
-      </Flex>
+        </>
+      )}
     </Box>
   );
 };

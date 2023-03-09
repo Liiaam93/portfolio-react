@@ -1,9 +1,20 @@
 import React from "react";
-import { Box, Text, Flex, Link, Divider } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Flex,
+  Link,
+  Divider,
+  Heading,
+  Image,
+} from "@chakra-ui/react";
 // import { Link as route } from "react-router-dom";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { Swiper, SwiperSlide } from "swiper/react";
+// import 'swiper/css/swiper.css';
+import { projects } from "../skills";
 
 const Projects = () => {
   const control = useAnimation();
@@ -45,6 +56,35 @@ const Projects = () => {
       <Link color="yellow" isExternal href="https://github.com/Liiaam93">
         https://github.com/Liiaam93 <ExternalLinkIcon mx="2px" />
       </Link>
+      <Box h={["50vh", "70vh"]} w="100%">
+        {/* <Swiper
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation
+          pagination={{ clickable: true }}
+        >
+          {projects.map((project) => (
+            <SwiperSlide key={project.title}>
+              <Box
+                h="100%"
+                w="100%"
+                bg="white"
+                boxShadow="md"
+                p={8}
+                borderRadius={8}
+              >
+                <Image src={project.image} mb={4} />
+                <Box>
+                  <Heading size="lg" mb={2}>
+                    {project.title}
+                  </Heading>
+                  <Text>{project.description}</Text>
+                </Box>
+              </Box>
+            </SwiperSlide>
+          ))}
+        </Swiper> */}
+      </Box>
     </Flex>
   );
 };
