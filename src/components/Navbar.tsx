@@ -123,7 +123,7 @@ const Navbar = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerBody backgroundColor={"rgb(184 38 1 / 0.5)"}>
+          <DrawerBody backgroundColor="#B82601">
             <VStack mt="10" spacing="10" p="10" textAlign={"center"}>
               <Button
                 w="100%"
