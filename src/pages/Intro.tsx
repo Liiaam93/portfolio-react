@@ -23,7 +23,7 @@ const Intro = () => {
   }, []);
 
   return (
-    <Box h={["50vh"]}>
+    <Box h={["70vh", "80vh"]}>
       <motion.div
         initial={{ scale: 1.5 }}
         animate={{ scale: 1 }}
