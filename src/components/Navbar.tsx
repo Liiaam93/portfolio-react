@@ -79,7 +79,7 @@ const Navbar = () => {
               onClick={() => window.scrollTo(0, 0)}
               color="white"
             >
-              <Image src="/logo.png" maxH="50px" />
+              <Image src="/logo.png" maxH="40px" />
             </Link>
           </Flex>
           <Flex justifyContent={"right"} w="-moz-fit-content">

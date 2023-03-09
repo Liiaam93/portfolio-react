@@ -82,34 +82,36 @@ const Intro = () => {
         I create things with:
       </Text>
       <Flex
-        m="auto"
-        w={"100%"}
+        w={"fit-content"}
         wrap={"wrap"}
         borderRadius="10"
         bgColor={"rgba(255, 255, 255, 0.2)"}
         color={"black"}
         justifyContent="center"
       >
-        {skills.map((skill) => (
+        {skills.map((skill, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: index * 0.1 }}
+            transition={{ delay: index * 0.4 }}
           >
-          <VStack padding={2}>
-            <Image
-              borderRadius={10}
-              marginX={2}
-              src={skill.image}
-              w={"50"}
-              h={"50"}
-            />
-            <Text textAlign={"center"} fontSize={[10, 16]}>
-              {skill.name}
-            </Text>
-          </VStack>
-        </motion.div>
+            <VStack padding={2}>
+              <Image
+                borderRadius={10}
+                marginX={2}
+                src={skill.image}
+                w={"50"}
+                h={"50"}
+                _hover={{
+                  filter: "invert(100%)",
+                }}
+              />
+              <Text textAlign={"center"} fontSize={[10, 16]}>
+                {skill.name}
+              </Text>
+            </VStack>
+          </motion.div>
         ))}
       </Flex>
     </Box>
