@@ -37,8 +37,8 @@ function App() {
         fontFamily="kanit"
       >
         <Flex
-          ml={["10%", "20%"]}
-          mr={["10%", "20%"]}
+          ml={["5%", "20%"]}
+          mr={["5%", "20%"]}
           pt="20vh"
           pb="50vh"
           flexDir={"column"}
