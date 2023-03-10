@@ -57,33 +57,7 @@ const Projects = () => {
         https://github.com/Liiaam93 <ExternalLinkIcon mx="2px" />
       </Link>
       <Box h={["50vh", "70vh"]} w="100%">
-        {/* <Swiper
-          spaceBetween={50}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-        >
-          {projects.map((project) => (
-            <SwiperSlide key={project.title}>
-              <Box
-                h="100%"
-                w="100%"
-                bg="white"
-                boxShadow="md"
-                p={8}
-                borderRadius={8}
-              >
-                <Image src={project.image} mb={4} />
-                <Box>
-                  <Heading size="lg" mb={2}>
-                    {project.title}
-                  </Heading>
-                  <Text>{project.description}</Text>
-                </Box>
-              </Box>
-            </SwiperSlide>
-          ))}
-        </Swiper> */}
+    
       </Box>
     </Flex>
   );
