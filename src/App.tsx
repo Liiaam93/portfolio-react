@@ -44,8 +44,8 @@ function App() {
           flexDir={"column"}
         >
           <Intro />
-          <About />
           <Projects />
+          <About />
           <Contact />
         </Flex>
         <Footer />

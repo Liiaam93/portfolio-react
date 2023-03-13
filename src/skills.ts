@@ -43,18 +43,27 @@ export const skills = [
 
 export const projects = [
   {
-    title: "Project 1",
-    image: "https://via.placeholder.com/300x150",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    id: 1,
+    title: "TV Tracker",
+    description:
+      "A TV & Film tracking app, built using React-Native, and the OMDB API",
+    imageUrl: "/project1.png",
+    url: "https://github.com/Liiaam93/tv-tracker",
   },
   {
-    title: "Project 2",
-    image: "https://via.placeholder.com/300x150",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    id: 2,
+    title: "Interactive Cluedo Card",
+    description:
+      "A paperless and reusable version of the Cluedo game deduction sheets!",
+    imageUrl: "/cluedo.jpg",
+    url: "https://cluedo-card.vercel.app/",
   },
   {
-    title: "Project 3",
-    image: "https://via.placeholder.com/300x150",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    id: 3,
+    title: "Recipedia",
+    description:
+      "Store recipes and track your ingredients online! Using firebase and React",
+    imageUrl: "https://via.placeholder.com/300x200?text=Project+3",
+    url: "https://recipedia-jet.vercel.app/",
   },
 ];

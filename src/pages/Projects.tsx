@@ -12,9 +12,8 @@ import {
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { Swiper, SwiperSlide } from "swiper/react";
-// import 'swiper/css/swiper.css';
 import { projects } from "../skills";
+import Carousel from "../components/Carousel";
 
 const Projects = () => {
   const control = useAnimation();
@@ -49,16 +48,14 @@ const Projects = () => {
       <Text pt="15vh" fontSize={"3xl"} textShadow={"2px 2px #000"}>
         My Projects
       </Text>
-      <Divider ml="5" w="100" />
-      <Text ml="5" mt="20" fontSize={"2xl"} textShadow={"1px 1px #000"}>
+      <Divider w="100" mb="5" />
+      {/* <Text ml="5" mt="20" fontSize={"2xl"} textShadow={"1px 1px #000"}>
         Check out my work here:
       </Text>
       <Link color="yellow" isExternal href="https://github.com/Liiaam93">
         https://github.com/Liiaam93 <ExternalLinkIcon mx="2px" />
-      </Link>
-      <Box h={["50vh", "70vh"]} w="100%">
-    
-      </Box>
+      </Link> */}
+      <Carousel projects={projects} />
     </Flex>
   );
 };
