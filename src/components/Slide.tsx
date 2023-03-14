@@ -9,7 +9,7 @@ type Project = {
 
 const Slide = ({ project }: { project: Project }) => {
   return (
-    <Box borderRadius="10" p="2">
+    <Box p="2">
       <Box mt="10px" mb="15px">
         <Box color="#B82601" fontWeight="bold" fontSize="xl">
           {project.title}
@@ -22,8 +22,8 @@ const Slide = ({ project }: { project: Project }) => {
       <Box
         m="auto"
         bgImage={`url(${project.imageUrl})`}
-        h="440px"
-        w="270px"
+        h={["410px", "440px"]}
+        w={["250px", "270px"]}
         bgSize="cover"
         bgPosition="center"
       />

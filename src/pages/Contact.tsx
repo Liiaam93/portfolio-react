@@ -32,6 +32,8 @@ const Contact = () => {
       verticalAlign={"center"}
       flexDirection="column"
       textAlign="center"
+      minH="50vh"
+      mt="10vh"
     >
       <Text
         pt="5"

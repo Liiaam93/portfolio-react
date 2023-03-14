@@ -99,11 +99,11 @@ const Navbar = () => {
             w={"100%"}
             spacing={"5"}
           >
-            <Button as={HashLink} to="/#about">
-              About
-            </Button>
             <Button as={HashLink} to="/#projects" colorScheme={"green"}>
               My Projects
+            </Button>
+            <Button as={HashLink} to="/#about">
+              About
             </Button>
             <Button as={HashLink} to="/#contact" colorScheme={"green"}>
               Contact
@@ -123,18 +123,10 @@ const Navbar = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerBody backgroundColor="#B82601">
+          <DrawerBody backgroundColor="#3f0000">
             <VStack mt="10" spacing="10" p="10" textAlign={"center"}>
               <Button
-                w="100%"
-                colorScheme={"green"}
-                as={Link}
-                onClick={onClose}
-                href="/#about"
-              >
-                About
-              </Button>
-              <Button
+                border={"solid 1px white"}
                 w="100%"
                 colorScheme={"green"}
                 as={Link}
@@ -144,6 +136,18 @@ const Navbar = () => {
                 My Projects
               </Button>
               <Button
+                border={"solid 1px white"}
+                w="100%"
+                colorScheme={"green"}
+                as={Link}
+                onClick={onClose}
+                href="/#about"
+              >
+                About
+              </Button>
+
+              <Button
+                border={"solid 1px white"}
                 w="100%"
                 colorScheme={"green"}
                 as={Link}
@@ -151,8 +155,13 @@ const Navbar = () => {
                 href="/#contact"
               >
                 Contact
-              </Button>{" "}
-              <Button w="100%" colorScheme={"green"} onClick={onButtonClick}>
+              </Button>
+              <Button
+                border={"solid 1px white"}
+                w="100%"
+                colorScheme={"green"}
+                onClick={onButtonClick}
+              >
                 My CV
               </Button>
             </VStack>

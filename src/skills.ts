@@ -63,7 +63,7 @@ export const projects = [
     title: "Recipedia",
     description:
       "Store recipes and track your ingredients online! Using firebase and React",
-    imageUrl: "https://via.placeholder.com/300x200?text=Project+3",
+    imageUrl: "/project3.png",
     url: "https://recipedia-jet.vercel.app/",
   },
 ];
