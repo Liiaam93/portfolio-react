@@ -101,9 +101,6 @@ const Intro = () => {
               <Text textAlign="center" fontSize={"2xl"} mt="5">
                 To create things.
               </Text>
-              <Box display="flex" justifyContent="center" pt="10">
-                <TriangleDownIcon />
-              </Box>
             </motion.div>
           </motion.div>
         </>
