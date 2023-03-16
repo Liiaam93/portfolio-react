@@ -32,7 +32,11 @@ const About = () => {
       animate={control}
     >
       <Box pt="15vh">
-        <Text fontSize={"3xl"} textAlign="center" textShadow={"2px 2px #000"}>
+        <Text
+          fontSize={["2xl", "3xl"]}
+          textAlign="center"
+          textShadow={"2px 2px #000"}
+        >
           About Me
         </Text>
         <Divider ml="5" w="100" />
@@ -56,24 +60,24 @@ const About = () => {
               backgroundColor={"rgba(255, 255, 255, 0.3)"}
             />
           </Box>
-          <Box fontSize="xl" textShadow={"1px 1px #000"}>
+          <Box fontSize="xl" textShadow={"1px 1px #000"} mt="2">
             <Text textAlign={["center", "left"]}>Hey</Text>
-            <Text pt="5" textAlign={["center", "left"]}>
+            <Text mt="2" textAlign={["center", "left"]}>
               I'm Liam and I'm a self-taught web developer with a passion for
               making things easier and more efficient.
             </Text>
-            <Text textAlign={["center", "left"]} pt="5" color={"#b82601"}>
+            <Text textAlign={["center", "left"]} mt="2" color={"#b82601"}>
               I stumbled upon web development in 2018 as a way to automate part
               of my job. Within six months, I had a working web application
               which scraped product information, stock levels and calculated
               prices based on brand and other factors.
             </Text>
-            <Text textAlign={["center", "left"]} pt="5" color={"white"}>
+            <Text textAlign={["center", "left"]} mt="2" color={"white"}>
               Since then I've decided to follow my dream of turning my hobby
               into a career.
             </Text>
 
-            <Text textAlign={["center", "left"]} color={"#b82601"} pt="5">
+            <Text textAlign={["center", "left"]} color={"#b82601"} mt="2">
               I'm always up for a challenge and love improving my skills. Let's
               make something amazing together!
             </Text>

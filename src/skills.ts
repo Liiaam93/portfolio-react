@@ -49,6 +49,7 @@ export const projects = [
       "A TV & Film tracking app, built using React-Native, and the OMDB API",
     imageUrl: "/project1.png",
     url: "https://github.com/Liiaam93/tv-tracker",
+    liveURL: "https://snack.expo.dev/Z2qO14eag?platform=android",
   },
   {
     id: 2,
@@ -56,7 +57,8 @@ export const projects = [
     description:
       "A paperless and reusable version of the Cluedo game deduction sheets!",
     imageUrl: "/cluedo.jpg",
-    url: "https://cluedo-card.vercel.app/",
+    url: "https://github.com/Liiaam93/cluedo-card",
+    liveURL: '"https://cluedo-card.vercel.app/"',
   },
   {
     id: 3,
@@ -64,6 +66,7 @@ export const projects = [
     description:
       "Store recipes and track your ingredients online! Using firebase and React",
     imageUrl: "/project3.png",
-    url: "https://recipedia-jet.vercel.app/",
+    url: "https://github.com/Liiaam93/react-recipe",
+    liveURL: "https://recipedia-jet.vercel.app/",
   },
 ];

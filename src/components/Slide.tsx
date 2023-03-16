@@ -1,10 +1,11 @@
-import { Box, Link, Text } from "@chakra-ui/react";
+import { Box, Flex, Link, Text } from "@chakra-ui/react";
 type Project = {
   id: number;
   title: string;
   description: string;
   imageUrl: string;
   url: string;
+  liveURL: string;
 };
 
 const Slide = ({ project }: { project: Project }) => {
@@ -15,9 +16,14 @@ const Slide = ({ project }: { project: Project }) => {
           {project.title}
         </Box>
         <Box>{project.description}</Box>
-        <Link color="forestgreen" href={project.url} isExternal>
-          View Here
-        </Link>
+        <Flex flexDirection={"column"}>
+          <Link color="forestgreen" href={project.url} isExternal>
+            Github
+          </Link>
+          <Link color="forestgreen" href={project.liveURL} isExternal>
+            View Live
+          </Link>
+        </Flex>
       </Box>
       <Box
         m="auto"

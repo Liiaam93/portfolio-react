@@ -11,6 +11,7 @@ type Project = {
   description: string;
   imageUrl: string;
   url: string;
+  liveURL: string;
 };
 
 type Props = {

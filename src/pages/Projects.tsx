@@ -1,17 +1,6 @@
-import React from "react";
-import {
-  Box,
-  Text,
-  Flex,
-  Link,
-  Divider,
-  Heading,
-  Image,
-} from "@chakra-ui/react";
-// import { Link as route } from "react-router-dom";
+import { Text, Flex, Divider } from "@chakra-ui/react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { projects } from "../skills";
 import Carousel from "../components/Carousel";
 
@@ -45,7 +34,7 @@ const Projects = () => {
       flexDirection="column"
       textAlign="center"
     >
-      <Text pt="15vh" fontSize={"3xl"} textShadow={"2px 2px #000"}>
+      <Text pt="5vh" fontSize={["2xl", "3xl"]} textShadow={"2px 2px #000"}>
         My Projects
       </Text>
       <Divider w="100" mb="5" />

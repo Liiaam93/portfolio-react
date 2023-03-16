@@ -36,7 +36,6 @@ const Contact = () => {
       mt="10vh"
     >
       <Text
-        pt="5"
         fontSize={["2xl", "3xl"]}
         textAlign="center"
         textShadow={"2px 2px #000"}
