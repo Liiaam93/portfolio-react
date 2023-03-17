@@ -60,7 +60,7 @@ const About = () => {
               backgroundColor={"rgba(255, 255, 255, 0.3)"}
             />
           </Box>
-          <Box fontSize="xl" textShadow={"1px 1px #000"} mt="2">
+          <Box fontSize={["md", "xl"]} textShadow={"1px 1px #000"} mt="2">
             <Text textAlign={["center", "left"]}>Hey</Text>
             <Text mt="2" textAlign={["center", "left"]}>
               I'm Liam and I'm a self-taught web developer with a passion for

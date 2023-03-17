@@ -46,7 +46,7 @@ export const projects = [
     id: 1,
     title: "TV Tracker",
     description:
-      "A TV & Film tracking app, built using React-Native, and the OMDB API",
+      "A TV & Film tracking app, built for Android, using Expo/React-Native and the OMDB API",
     imageUrl: "/project1.png",
     url: "https://github.com/Liiaam93/tv-tracker",
     liveURL: "https://snack.expo.dev/Z2qO14eag?platform=android",
@@ -64,7 +64,7 @@ export const projects = [
     id: 3,
     title: "Recipedia",
     description:
-      "Store recipes and track your ingredients online! Using firebase and React",
+      "Store recipes and track your ingredients online! Using Firebase and React",
     imageUrl: "/project3.png",
     url: "https://github.com/Liiaam93/react-recipe",
     liveURL: "https://recipedia-jet.vercel.app/",
